@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neural Nexus Document Router
 
 MA6700 Applied AI and Machine Learning — Assignment 3
@@ -36,3 +37,7 @@ source .venv/bin/activate
 Install dependencies:
 
 pip install -r requirements.txt
+=======
+# neural-nexus-document-router
+This document router project is created for a project required for the Applied AI and Machine Learning Module.
+>>>>>>> 98cba995a60ed0c57d432adf827c011247761329
