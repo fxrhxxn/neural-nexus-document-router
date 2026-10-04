@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Large model files
+*.pt
+*.pth
+
+# Local secrets
+.env
+.venv
+# Temporary output
+outputs/temp/
