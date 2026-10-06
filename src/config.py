@@ -138,3 +138,11 @@ ROUTING_OUTCOMES = [
     "Administration",
     "Manual Review",
 ]
+
+
+# ============================================================
+# Hugging Face dataset
+# ============================================================
+
+HF_DATASET_NAME = "Chan814/rvl-cdip"
+HF_DATASET_SPLIT = "train"
