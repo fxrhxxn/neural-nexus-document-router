@@ -1,0 +1,11 @@
+source_index,original_class,raw_character_count,raw_word_count,raw_alphabetic_token_ratio,otsu_character_count,otsu_word_count,otsu_alphabetic_token_ratio,raw_manual_score,otsu_manual_score,preferred_variant,audit_notes
+125075,invoice,435,108,0.4815,621,166,0.5843,,,,
+137593,invoice,531,99,0.6566,566,114,0.6579,,,,
+157568,letter,424,99,0.7879,812,171,0.8363,,,,
+147624,letter,2015,359,0.9666,2021,365,0.9616,,,,
+90625,form,535,120,0.6583,541,120,0.6583,,,,
+92528,form,1185,306,0.7484,970,245,0.6531,,,,
+247255,resume,1085,154,0.9156,1094,160,0.8812,,,,
+258439,resume,2454,390,0.9308,2377,372,0.9167,,,,
+108930,handwritten,256,63,0.7937,265,85,0.6941,,,,
+115932,handwritten,113,28,0.8214,148,39,0.6923,,,,
