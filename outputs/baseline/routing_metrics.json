@@ -1,0 +1,12 @@
+{
+  "validation_records": 1008,
+  "document_class_accuracy": 0.7807539682539683,
+  "document_class_macro_f1": 0.7857540983506921,
+  "routing_accuracy": 0.8323412698412699,
+  "routing_macro_f1": 0.8287787334652018,
+  "routing_weighted_f1": 0.8364915801918424,
+  "classification_errors": 221,
+  "routing_errors": 169,
+  "classification_errors_with_correct_route": 52,
+  "test_split_used": false
+}
