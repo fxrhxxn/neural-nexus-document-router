@@ -1,0 +1,31 @@
+{
+  "run_id": "cfcc31a6e99e",
+  "text_source": "outputs\\ocr_cache\\train_raw.jsonl",
+  "validation_source": "outputs\\ocr_cache\\validation_raw.jsonl",
+  "target_column": "original_class",
+  "ocr_variant": "raw",
+  "random_seed": 42,
+  "tfidf": {
+    "lowercase": true,
+    "strip_accents": "unicode",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 100000,
+    "sublinear_tf": true
+  },
+  "logistic_regression": {
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 42
+  },
+  "test_split_used": false,
+  "software_versions": {
+    "python_version": "3.13.11",
+    "scikit_learn_version": "1.9.1",
+    "scipy_version": "1.18.1",
+    "numpy_version": "2.5.3",
+    "pandas_version": "3.0.6"
+  }
+}
