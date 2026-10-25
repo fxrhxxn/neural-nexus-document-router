@@ -1,0 +1,21 @@
+﻿file_id,filename,selected_page,document_type,routing_outcome,language,source_type,source_description,real_or_mock,creator,date_added,notes
+MU001,MU001_questionnaire_en.pdf,1,questionnaire,Administration,English,Public,Statistics Mauritius 2022 Population Census Questionnaire,Real/Public,Farhaan,24/10/2026,Representative local questionnaire
+MU002,MU002_questionnaire_en.pdf,3,questionnaire,Administration,English,Public,Financial Services Commission Personal Questionnaire,Real/Public,Farhaan,24/10/2026,Representative regulatory questionnaire
+MU003,MU003_budget_en.pdf,1,budget,Finance,English,Public,Mauritius Summary of Revenue Projections,Real/Public,Farhaan,24/10/2026,Government budget-style document
+MU004,MU004_budget_en.pdf,1,budget,Finance,English,Public,Ministry of Finance expenditure estimates,Real/Public,Farhaan,24/10/2026,Government budget-style document
+MU005,MU005_resume_en.pdf,1,resume,HR,English,Mock,Anonymised Mauritian-style resume,Mock,Farhaan,24/10/2026,Direct personal identifiers removed
+MU006,MU006_memo_fr.pdf,1,memo,Correspondence,French,Mock,Fictional internal administrative memo,Mock,Farhaan,24/10/2026,French-language memo
+MU007,MU007_handwritten_en.pdf,1,handwritten,Manual Review,English,Mock,Fictional handwritten administrative note,Mock,Farhaan,24/10/2026,Handwritten letter to finance department
+MU008,MU008_invoice_en.pdf,1,invoice,Finance,English,Mock,Fictional Mauritian business invoice,Mock,Farhaan,24/10/2026,Includes BRN VAT and MUR values
+MU009,MU009_letter_fr.pdf,1,letter,Correspondence,French,Mock,Fictional formal administrative letter,Mock,Farhaan,24/10/2026,French-language letter
+MU010,MU010_form_en.pdf,1,form,Administration,English,Mock,Fictional employee training request form,Mock,Farhaan,24/10/2026,Administrative form
+MU021,MU021_handwritten_en.pdf,1,handwritten,Manual Review,English,Mock,Photograph of an original handwritten fictional note about office supplies in Moka.,Mock,Parisha,25/10/2026,Handwritten by Parisha; original photograph preserved without retouching; fictional content.
+MU022,MU022_handwritten_fr.pdf,1,handwritten,Manual Review,French,Mock,Photograph of an original handwritten fictional note about meeting-room preparation in Curepipe.,Mock,Parisha,25/10/2026,Handwritten by Parisha; original photograph preserved without retouching; fictional content.
+MU023,MU023_memo_en.pdf,1,memo,Correspondence,English,Mock,Fictional internal office memo about a Port Louis to Moka archive transfer.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU024,MU024_memo_fr.pdf,1,memo,Correspondence,French,Mock,Note de service fictive concernant un inventaire de fournitures à Curepipe.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU025,MU025_email_en.pdf,1,email,Correspondence,English,Mock,Fictional printed booking confirmation email; reserved .example domains used.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU026,MU026_email_fr.pdf,1,email,Correspondence,French,Mock,Fictional printed French email reply with quoted booking request; reserved .example domains used.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU027,MU027_letter_en.pdf,1,letter,Correspondence,English,Mock,Fictional formal letter requesting a community workshop venue in Moka.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU028,MU028_letter_fr.pdf,1,letter,Correspondence,French,Mock,Lettre fictive de demande de devis pour du mobilier livré à Curepipe.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU029,MU029_budget_en.pdf,1,budget,Finance,English,Mock,Fictional monthly administrative operating budget for a Moka office.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU030,MU030_budget_fr.pdf,1,budget,Finance,French,Mock,Budget prévisionnel fictif pour un atelier associatif à Rose Hill.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
