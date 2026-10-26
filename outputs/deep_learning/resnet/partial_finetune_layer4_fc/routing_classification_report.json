@@ -1,0 +1,45 @@
+{
+  "Finance": {
+    "precision": 0.8544600938967136,
+    "recall": 0.8125,
+    "f1-score": 0.8329519450800915,
+    "support": 224.0
+  },
+  "Correspondence": {
+    "precision": 0.8773006134969326,
+    "recall": 0.8511904761904762,
+    "f1-score": 0.8640483383685801,
+    "support": 336.0
+  },
+  "HR": {
+    "precision": 0.8879310344827587,
+    "recall": 0.9196428571428571,
+    "f1-score": 0.9035087719298246,
+    "support": 112.0
+  },
+  "Administration": {
+    "precision": 0.7333333333333333,
+    "recall": 0.7366071428571429,
+    "f1-score": 0.734966592427617,
+    "support": 224.0
+  },
+  "Manual Review": {
+    "precision": 0.8203125,
+    "recall": 0.9375,
+    "f1-score": 0.875,
+    "support": 112.0
+  },
+  "accuracy": 0.8343253968253969,
+  "macro avg": {
+    "precision": 0.8346675150419477,
+    "recall": 0.8514880952380952,
+    "f1-score": 0.8420951295612227,
+    "support": 1008.0
+  },
+  "weighted avg": {
+    "precision": 0.8350813588259611,
+    "recall": 0.8343253968253969,
+    "f1-score": 0.8340545402278869,
+    "support": 1008.0
+  }
+}
