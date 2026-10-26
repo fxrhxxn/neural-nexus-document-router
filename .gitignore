@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Python
+# Python cache / compiled files
 __pycache__/
 *.py[cod]
 
@@ -12,14 +11,16 @@ __pycache__/
 # macOS
 .DS_Store
 
+# Local secrets / environment variables
+.env
+
 # Large model files
 *.pt
 *.pth
+*.ckpt
+*.onnx
 
-# Local secrets
-.env
-.venv
-# Temporary output
+# Temporary outputs
 outputs/temp/
 
 # Sampled RVL-CDIP images
