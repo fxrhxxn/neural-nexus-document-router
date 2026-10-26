@@ -1,0 +1,20 @@
+{
+  "experiment": "verification_run",
+  "model": "ResNet-18",
+  "pretrained": true,
+  "freeze_backbone": true,
+  "use_augmentation": false,
+  "random_seed": 42,
+  "num_document_classes": 9,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "epochs": 1,
+  "optimizer": "Adam",
+  "checkpoint_metric": "validation_routing_macro_f1",
+  "device": "mps",
+  "training_documents": 4725,
+  "validation_documents": 1008,
+  "best_epoch": 1,
+  "best_validation_routing_macro_f1": 0.5997707806395878,
+  "elapsed_seconds": 44.33999800682068
+}
