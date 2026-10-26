@@ -19,10 +19,10 @@ from src.models.resnet_dataset import CLASS_NAMES, NeuralNexusDataset
 from src.models.resnet_model import build_resnet18, get_device
 
 
-EXPERIMENT_NAME = "verification_run"
+EXPERIMENT_NAME = "frozen_backbone"
 BATCH_SIZE = 16
 LEARNING_RATE = 1e-3
-EPOCHS = 1
+EPOCHS = 5
 USE_AUGMENTATION = False
 
 
