@@ -1,0 +1,19 @@
+true_route,predicted_route,count
+Administration,Correspondence,28
+Finance,Administration,21
+Administration,Finance,18
+Correspondence,Administration,15
+Finance,Correspondence,14
+Correspondence,HR,12
+Correspondence,Finance,11
+Administration,Manual Review,9
+Administration,HR,7
+Correspondence,Manual Review,6
+Finance,HR,4
+HR,Correspondence,4
+Manual Review,Administration,4
+Finance,Manual Review,3
+HR,Administration,2
+Manual Review,Correspondence,2
+HR,Finance,1
+Manual Review,Finance,1

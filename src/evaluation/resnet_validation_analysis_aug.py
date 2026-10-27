@@ -15,7 +15,7 @@ PREDICTIONS_PATH = Path(
 
 OUTPUT_DIR = Path(
     "outputs/deep_learning/resnet/"
-    "partial_finetune_layer4_fc"
+    "partial_finetune_layer4_fc_aug"
 )
 
 ROUTE_NAMES = [
