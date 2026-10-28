@@ -55,7 +55,7 @@ METADATA_CSV = (
 # Expected dataset configuration
 # ============================================================
 
-EXPECTED_DOCUMENT_COUNT = 20
+EXPECTED_DOCUMENT_COUNT = 40
 
 
 ALLOWED_CLASSES = {

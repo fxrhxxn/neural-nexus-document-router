@@ -9,6 +9,16 @@ MU007,MU007_handwritten_en.pdf,1,handwritten,Manual Review,English,Mock,Fictiona
 MU008,MU008_invoice_en.pdf,1,invoice,Finance,English,Mock,Fictional Mauritian business invoice,Mock,Farhaan,24/10/2026,Includes BRN VAT and MUR values
 MU009,MU009_letter_fr.pdf,1,letter,Correspondence,French,Mock,Fictional formal administrative letter,Mock,Farhaan,24/10/2026,French-language letter
 MU010,MU010_form_en.pdf,1,form,Administration,English,Mock,Fictional employee training request form,Mock,Farhaan,24/10/2026,Administrative form
+MU011,MU011_invoice_fr.pdf,1,invoice,Finance,French,Mock,French invoice  from a fictional Mauritian distributor,mock,Chrishini ,26/10/2026,fictional email creation using mauritian contact details and data
+MU012,MU012_invoice_en.pdf,1,invoice,Finance,English,Mock,Hospital invoice built from a Canva template with fake patient and doctor data,mock,Chrishini,26/10/2026,"Hospital invoice, amounts in rupees"
+MU013,MU013_invoice_en.pdf,1,invoice,Finance,English,Mock,Travel agency invoice built from a Canva template with fake client data,mock,Chrishini,26/10/2026,"Travel agency invoice, amounts in RS"
+MU014,MU014_letter_en.pdf,1,letter,Correspondence,English,Mock,Recommendation letter built from a Canva template with fake names,mock,Chrishini,26/10/2026,Recommendation letter
+MU015,MU015_letter_en.pdf,1,letter,Correspondence,English,Mock,Job offer letter built from a Canva template with fake names,mock,Chrishini,26/10/2026,"Job offer letter using mauritian name, contact and address"
+MU016,MU016_form_en.pdf,1,form,Administration,English,Mock,Filled-in facial treatment consultation form built from a Canva template with fake client data,mock,Chrishini,26/10/2026,"Facial treatment form, fake personal data"
+MU017,MU017_form_en.pdf,1,form,Administration,English,Mock,Filled-in gym membership form built from a Canva template with fake member data,mock,Chrishini,26/10/2026,Gym membership form with checkboxes
+MU018,MU018_email_en.pdf,1,email,Correspondence,English,Mock,"English corporate AGM notice email, generated with canva",mock,Chrishini,27/10/2026,English AGM notice email
+MU019,MU019_email_fr.pdf,1,email,Correspondence,French,Mock,synthetic email creation with mauritian data,mock,Chrishini,27/10/2026,Short French email template
+MU020,MU020_questionnaire_en.pdf,1,questionnaire,Administration,English,Public,"Afrobarometer Round 10 questionnaire, The Quality of Democracy and Governance in Mauritius",Real/Public,Chrishini,27/10/2026,Afrobarometer Round 10 questionnaire
 MU021,MU021_handwritten_en.pdf,1,handwritten,Manual Review,English,Mock,Photograph of an original handwritten fictional note about office supplies in Moka.,Mock,Parisha,25/10/2026,Handwritten by Parisha; original photograph preserved without retouching; fictional content.
 MU022,MU022_handwritten_fr.pdf,1,handwritten,Manual Review,French,Mock,Photograph of an original handwritten fictional note about meeting-room preparation in Curepipe.,Mock,Parisha,25/10/2026,Handwritten by Parisha; original photograph preserved without retouching; fictional content.
 MU023,MU023_memo_en.pdf,1,memo,Correspondence,English,Mock,Fictional internal office memo about a Port Louis to Moka archive transfer.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
@@ -19,3 +29,13 @@ MU027,MU027_letter_en.pdf,1,letter,Correspondence,English,Mock,Fictional formal 
 MU028,MU028_letter_fr.pdf,1,letter,Correspondence,French,Mock,Lettre fictive de demande de devis pour du mobilier livré à Curepipe.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
 MU029,MU029_budget_en.pdf,1,budget,Finance,English,Mock,Fictional monthly administrative operating budget for a Moka office.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
 MU030,MU030_budget_fr.pdf,1,budget,Finance,French,Mock,Budget prévisionnel fictif pour un atelier associatif à Rose Hill.,Mock,Parisha,25/10/2026,Fictional content; simulated scan/print; no real personal data.
+MU031,MU031_invoice_en.pdf,1,invoice,Finance,English,Mock,"Mock invoice - Lagoon Fresh Supplies Ltd (fictional supplier, Grand Baie)",Mock,Uddish,28/10/2026,Invoice Itemised table with 15% VAT
+MU032,MU032_invoice_fr.pdf,1,invoice,Finance,French,Mock,"Mock facture - Quincaillerie Ravin & Fils Ltée (fictional, Curepipe)",Mock,Uddish,28/10/2026,French layout with discount row
+MU033,MU033_form_en.pdf,1,form,Administration,English,Mock,Mock water-connection application - Aqua Mauritia Utilities Ltd (fictional),Mock,Uddish,28/10/2026,"Comb boxes, tick boxes, stamp"
+MU034,MU034_form_fr.pdf,1,form,Administration,French,Mock,"Mock school enrolment form - Collège Les Flamboyants (fictional, Floréal)",Mock,Uddish,28/10/2026,School enrolment sheet
+MU035,MU035_questionnaire_en.pdf,1,questionnaire,Administration,English,Mock,"Mock guest survey - Coral Bay Boutique Hotel (fictional, Flic en Flac)",Mock,Uddish,28/10/2026,Hotel Rating grid with 0-10 scale
+MU036,MU036_questionnaire_fr.pdf,1,questionnaire,Administration,French,Mock,"Mock mobility survey - Observatoire de la Mobilité Urbaine (fictional, Port Louis)",Mock,Uddish,28/10/2026,Survery with tick lists
+MU037,MU037_resume_en.pdf,1,resume,HR,English,Mock,"Mock resume - fictional candidate, Rose Hill",Mock,Uddish,28/10/2026,Fictional CV english
+MU038,MU038_resume_fr.pdf,1,resume,HR,French,Mock,"Mock CV - fictional candidate, Flic en Flac",Mock,Uddish,28/10/2026,Fictional CV french
+MU039,MU039_memo_en.pdf,1,memo,Correspondence,English,Mock,"Mock internal memo - Indigo Digital Solutions Ltd (fictional, Ebene)",Mock,Uddish,28/10/2026,Differnet font plus grayscale photocopy look
+MU040,MU040_memo_fr.pdf,1,memo,Correspondence,French,Mock,"Mock note de service - Groupe Tamarin Logistics Ltée (fictional, Riche Terre)",Mock,Uddish,28/10/2026,Letterhead and stamp
