@@ -9,7 +9,7 @@ from pathlib import Path
 
 import numpy as np
 
-from config import DOCUMENT_TO_DEPARTMENT
+from src.config import DOCUMENT_TO_ROUTING_OUTCOME as DOCUMENT_TO_DEPARTMENT
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CHECKPOINT_PATH = PROJECT_ROOT / "models" / "best_resnet18.pt"

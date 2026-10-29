@@ -8,7 +8,7 @@ Rule:  confidence >= tau -> AUTO_ROUTE
 tau is chosen on VALIDATION predictions only. Never on the test set.
 """
 import pandas as pd
-from config import DOCUMENT_TO_DEPARTMENT
+from src.config import DOCUMENT_TO_ROUTING_OUTCOME as DOCUMENT_TO_DEPARTMENT
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt

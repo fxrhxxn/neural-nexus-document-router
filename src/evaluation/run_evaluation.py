@@ -2,7 +2,7 @@
 import argparse
 from pathlib import Path
 
-from config import DOCUMENT_TO_DEPARTMENT
+from src.config import DOCUMENT_TO_ROUTING_OUTCOME as DOCUMENT_TO_DEPARTMENT
 from src.evaluation.metrics import (
     load_predictions, overall_metrics, per_class_report, confusion,
     invoice_recall, plot_confusion_matrix,

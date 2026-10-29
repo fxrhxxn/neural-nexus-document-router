@@ -1,7 +1,7 @@
 """Error analysis (Uddish): find real failures to explain in the report."""
 import pandas as pd
 
-from config import DOCUMENT_TO_DEPARTMENT
+from src.config import DOCUMENT_TO_ROUTING_OUTCOME as DOCUMENT_TO_DEPARTMENT
 from src.evaluation.thresholding import apply_threshold
 
 

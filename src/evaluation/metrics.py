@@ -22,7 +22,7 @@ from sklearn.metrics import (
     accuracy_score, classification_report, confusion_matrix, f1_score,
 )
 
-from config import DOCUMENT_TO_DEPARTMENT
+from src.config import DOCUMENT_TO_ROUTING_OUTCOME as DOCUMENT_TO_DEPARTMENT
 
 REQUIRED_COLUMNS = ["file_id", "actual_class", "predicted_class", "confidence"]
 
