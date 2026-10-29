@@ -80,3 +80,29 @@ def plot_coverage_vs_accuracy(table, out_path):
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
     plt.close(fig)
+
+def route_single_document(probs, tau):
+    """Decide what happens to ONE document (used by the demo).
+
+    probs: dict mapping each of the 9 classes to its probability.
+    Uses the route confidence: the summed probability of the predicted
+    document's department."""
+    predicted_class = max(probs, key=probs.get)
+    department = DOCUMENT_TO_DEPARTMENT[predicted_class]
+    route_confidence = sum(
+        p for c, p in probs.items() if DOCUMENT_TO_DEPARTMENT[c] == department
+    )
+    if predicted_class == "handwritten":
+        decision, reason = "MANUAL_REVIEW", "HANDWRITTEN"
+    elif route_confidence < tau:
+        decision, reason = "MANUAL_REVIEW", "LOW_CONFIDENCE"
+    else:
+        decision, reason = "AUTO_ROUTE", ""
+    return {
+        "predicted_class": predicted_class,
+        "department": department,
+        "confidence": probs[predicted_class],
+        "route_confidence": route_confidence,
+        "decision": decision,
+        "review_reason": reason,
+    }
