@@ -1,0 +1,7 @@
+original_class,documents,mean_raw_score,mean_otsu_score,mean_change_otsu_minus_raw,otsu_score_higher,scores_equal,otsu_score_lower,prefer_raw,prefer_otsu
+ALL,10,1.4,1.4,0.0,1,8,1,4,6
+form,2,1.0,1.5,0.5,1,1,0,0,2
+handwritten,2,0.5,0.0,-0.5,0,1,1,2,0
+invoice,2,1.5,1.5,0.0,0,2,0,1,1
+letter,2,2.0,2.0,0.0,0,2,0,1,1
+resume,2,2.0,2.0,0.0,0,2,0,0,2

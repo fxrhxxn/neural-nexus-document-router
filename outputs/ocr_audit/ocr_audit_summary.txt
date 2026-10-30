@@ -1,0 +1,27 @@
+OCR manual audit summary
+Source: outputs\ocr_audit\ocr_quality_audit.csv
+Documents audited: 10 (training split, seed 42)
+Scores: 0 = unusable, 1 = partially readable, 2 = mostly readable
+
+original_class  documents  mean_raw_score  mean_otsu_score  mean_change_otsu_minus_raw  otsu_score_higher  scores_equal  otsu_score_lower  prefer_raw  prefer_otsu
+           ALL         10             1.4              1.4                         0.0                  1             8                 1           4            6
+          form          2             1.0              1.5                         0.5                  1             1                 0           0            2
+   handwritten          2             0.5              0.0                        -0.5                  0             1                 1           2            0
+       invoice          2             1.5              1.5                         0.0                  0             2                 0           1            1
+        letter          2             2.0              2.0                         0.0                  0             2                 0           1            1
+        resume          2             2.0              2.0                         0.0                  0             2                 0           0            2
+
+Per-document scores:
+ source_index original_class  raw_manual_score  otsu_manual_score  score_change preferred_variant
+       125075        invoice                 1                  1             0              otsu
+       137593        invoice                 2                  2             0               raw
+       157568         letter                 2                  2             0              otsu
+       147624         letter                 2                  2             0               raw
+        90625           form                 1                  2             1              otsu
+        92528           form                 1                  1             0              otsu
+       247255         resume                 2                  2             0              otsu
+       258439         resume                 2                  2             0              otsu
+       108930    handwritten                 1                  0            -1               raw
+       115932    handwritten                 0                  0             0               raw
+
+Limitations: 10 documents from 5 of 9 classes (budget, email, memo and questionnaire not sampled); scores are manual judgements without reference transcriptions, so they are not OCR accuracy, CER or WER; Otsu here means grayscale + 1.5x upscale + Otsu, so any difference cannot be attributed to the threshold method alone.

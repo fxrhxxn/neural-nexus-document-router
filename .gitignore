@@ -20,8 +20,14 @@ __pycache__/
 *.ckpt
 *.onnx
 
+# Sampled RVL-CDIP images
+data/sampled/
+
+# Generated OCR caches
+outputs/ocr_cache/
+
 # Temporary outputs
 outputs/temp/
 
-# Sampled RVL-CDIP images
-data/sampled/
+# Generated project structure file
+NeuralNexusProjectStructure.md

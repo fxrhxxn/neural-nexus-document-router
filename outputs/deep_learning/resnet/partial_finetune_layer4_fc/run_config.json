@@ -1,0 +1,20 @@
+{
+  "experiment": "partial_finetune_layer4_fc",
+  "model": "ResNet-18",
+  "pretrained": true,
+  "freeze_backbone": true,
+  "use_augmentation": false,
+  "random_seed": 42,
+  "num_document_classes": 9,
+  "batch_size": 16,
+  "learning_rate": 0.0001,
+  "epochs": 10,
+  "optimizer": "Adam",
+  "checkpoint_metric": "validation_routing_macro_f1",
+  "device": "mps",
+  "training_documents": 4725,
+  "validation_documents": 1008,
+  "best_epoch": 8,
+  "best_validation_routing_macro_f1": 0.8420951295612227,
+  "elapsed_seconds": 464.745619058609
+}
