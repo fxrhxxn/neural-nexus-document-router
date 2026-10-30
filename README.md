@@ -1,36 +1,31 @@
 # Neural Nexus Document Router
 
 **MA6700 — Applied AI and Machine Learning**  
-**Assignment 3 — Group Project**
+**Assignment 3 — Group Project**  
+**Team: Neural Nexus**
 
 ## Project Overview
 
-The **Neural Nexus Document Router** is an AI-based document classification and routing system designed to automatically classify scanned or photographed documents and route them to the appropriate organisational department.
+The **Neural Nexus Document Router** is an AI-based system for automatically classifying scanned documents and routing them to the appropriate organisational department.
 
-The project explores both **text-based** and **image-based** machine-learning approaches for document understanding. Scanned documents are processed using OCR to extract textual content, while deep-learning models analyse the visual structure of the document itself.
+The project evaluates two approaches:
 
-The system focuses on nine document categories and maps each predicted class to a higher-level routing destination.
+- **OCR-based text classification** using Tesseract, TF-IDF and Logistic Regression.
+- **Image classification** using a fine-tuned ResNet-18.
+
+The final Streamlit demonstration uses the **ResNet-18 image-classification pipeline** together with confidence-based routing and manual review.
 
 ---
 
 ## Problem Statement
 
-Organisations may receive large numbers of scanned documents such as invoices, letters, forms, memos, questionnaires and resumes.
+Organisations may receive large numbers of scanned documents such as invoices, letters, forms, memos, questionnaires and resumes. Manual inspection and routing can be repetitive, time-consuming, prone to error and difficult to scale.
 
-Manually inspecting and routing these documents is:
-
-- repetitive;
-- time-consuming;
-- prone to human error;
-- difficult to scale.
-
-The project investigates how AI and machine learning can support automatic document classification while retaining a **manual-review mechanism for uncertain predictions**.
+This project investigates how AI and machine learning can support automatic document classification while retaining a **manual-review mechanism for uncertain predictions**.
 
 ---
 
-## Document Classes
-
-The project uses the following nine document classes:
+## Document Classes and Routing
 
 | Document Class | Routing Destination |
 |---|---|
@@ -44,24 +39,22 @@ The project uses the following nine document classes:
 | Resume | Human Resources |
 | Handwritten | Manual Review |
 
+Handwritten documents are always sent to **Manual Review**.
+
 ---
 
 ## Dataset
 
-The primary dataset is a selected subset of the **RVL-CDIP document image dataset**, accessed through a Hugging Face mirror.
-
-Nine document classes were selected for the project.
+The project uses a selected subset of the **RVL-CDIP document image dataset**, accessed through a Hugging Face mirror.
 
 ### Sampling
 
-- **750 documents per class**
-- **9 classes**
-- **6,750 documents in total**
-- Random seed: **42**
+- 9 document classes
+- 750 documents per class
+- 6,750 documents in total
+- Fixed random seed: **42**
 
 ### Dataset Split
-
-A stratified split was used so that each class remained evenly represented.
 
 | Split | Documents | Documents per Class |
 |---|---:|---:|
@@ -70,66 +63,175 @@ A stratified split was used so that each class remained evenly represented.
 | Test | 1,017 | 113 |
 | **Total** | **6,750** | **750** |
 
-The validation set is used during model development and threshold selection, while the test set is reserved for final evaluation.
+The validation set was used for model development, checkpoint selection and threshold selection. The held-out test set was used only after the final model configuration and routing threshold were frozen.
 
 ---
 
-## AI and Machine-Learning Approaches
+## Mauritian External Evaluation Set
 
-The project investigates multiple approaches to document classification.
+A separate **Mauritian-oriented evaluation set** was prepared to observe how the final system behaves on more locally representative documents.
 
-### OCR and Text Classification
+The set contains **40 documents**:
 
-OCR is used to extract text from scanned document images.
+| Class | Count |
+|---|---:|
+| Budget | 4 |
+| Email | 4 |
+| Form | 5 |
+| Handwritten | 3 |
+| Invoice | 6 |
+| Letter | 5 |
+| Memo | 5 |
+| Questionnaire | 5 |
+| Resume | 3 |
 
-The traditional machine-learning baseline uses:
+Language distribution:
 
-- Tesseract OCR
-- TF-IDF feature extraction
-- Logistic Regression
+- **26 English documents**
+- **14 French documents**
 
-This provides a text-based baseline against which more advanced approaches can be compared.
+The set was kept separate from the RVL-CDIP training, validation and test data and was **not used for training, model selection, preprocessing selection or threshold tuning**.
 
-### Image Classification
-
-A **ResNet-18** convolutional neural network is used to classify documents using their visual appearance.
-
-This allows the system to learn characteristics such as:
-
-- page layout;
-- structural patterns;
-- text positioning;
-- tables;
-- formatting;
-- visual document style.
-
-### Confidence-Based Routing
-
-Model confidence is used to support safer routing decisions.
-
-Documents with sufficiently reliable predictions may be automatically routed, while uncertain documents can be directed to a **manual-review workflow**.
+For multi-page PDFs, one representative page was selected before prediction and converted to RGB PNG at **200 DPI**. Because the set is small and manually curated, it is treated as a **qualitative external evaluation** rather than a statistically representative benchmark.
 
 ---
 
-## Mauritian External Evaluation
+## Approaches Implemented
 
-In addition to the RVL-CDIP test set, a separate **Mauritian document evaluation set** is being prepared.
+### 1. OCR + TF-IDF + Logistic Regression Baseline
 
-Its purpose is to observe how the final system behaves on documents that are more representative of a Mauritian organisational context.
+The text-based baseline uses:
 
-The external set contains:
+1. **Tesseract OCR** to extract text.
+2. **TF-IDF** to create numerical text features.
+3. **Logistic Regression** to classify the document.
+4. Class-to-route mapping to determine the organisational destination.
 
-- public documents;
-- anonymised or fictional mock documents;
-- English-language documents;
-- French-language documents;
-- examples covering the project's document classes.
+The OCR study compared raw-image OCR with an Otsu-based preprocessing pipeline. The small manual audit produced the same average readability score for both approaches, so **raw OCR was retained as the baseline**.
 
-The Mauritian evaluation set is kept completely separate from the main RVL-CDIP dataset.
+### Baseline Validation Results
 
-It is **not used for training, hyperparameter tuning, preprocessing selection or confidence-threshold selection**.
+| Metric | Result |
+|---|---:|
+| 9-class accuracy | 0.7808 |
+| 9-class macro-F1 | 0.7858 |
+| Routing accuracy | 0.8323 |
+| Routing macro-F1 | 0.8288 |
 
-For multi-page documents, one representative page is selected before model predictions are generated.
+---
+
+### 2. ResNet-18 Image Classifier
+
+A pretrained **ResNet-18** was adapted using transfer learning.
+
+The final configuration used:
+
+- ImageNet-pretrained weights
+- RGB input
+- 224 × 224 image size
+- ImageNet normalisation
+- Partial fine-tuning of `layer4` and the final classifier
+- Adam optimiser
+- Cross-Entropy Loss
+- Learning rate: **0.0001**
+- Batch size: **16**
+- Light random rotation of approximately **±2°**
+
+### ResNet Experimental Progression
+
+| Experiment | Best Epoch | 9-Class Accuracy | 9-Class Macro-F1 | Routing Accuracy | Routing Macro-F1 |
+|---|---:|---:|---:|---:|---:|
+| Frozen ResNet-18, 5 epochs | 5 | 0.5665 | 0.5598 | 0.6786 | 0.6800 |
+| Frozen ResNet-18, 10 epochs | 8 | 0.5774 | 0.5663 | 0.7093 | 0.7148 |
+| Partial fine-tuning | 8 | 0.7837 | 0.7831 | 0.8343 | 0.8421 |
+| Partial fine-tuning + augmentation | 10 | 0.7907 | 0.7891 | 0.8393 | **0.8445** |
+
+The partially fine-tuned model with light augmentation achieved the strongest validation performance and was selected as the final ResNet configuration.
+
+### Final Held-Out Test Results
+
+| Metric | Result |
+|---|---:|
+| 9-class accuracy | 0.7768 |
+| 9-class macro-F1 | 0.7759 |
+| Routing accuracy | 0.8348 |
+| Routing macro-F1 | 0.8373 |
+| Invoice recall | 0.726 |
+
+---
+
+## Confidence-Based Routing
+
+The final system uses **route confidence** rather than document-class probability alone.
+
+Route confidence is the sum of the probabilities of all document classes belonging to the predicted department.
+
+For example:
+
+```text
+Correspondence = email + letter + memo
+```
+
+Routing rule:
+
+```text
+route confidence >= 0.95  -> AUTO_ROUTE
+route confidence < 0.95   -> MANUAL_REVIEW
+predicted handwritten     -> MANUAL_REVIEW
+```
+
+The threshold **τ = 0.95** was selected using the validation set only.
+
+At this threshold:
+
+- Validation auto-routed accuracy: **95.22%**
+- Test auto-routed coverage: **56.54%**
+- Test auto-routed accuracy: **94.96%**
+
+The threshold was not changed after observing the test-set result.
+
+---
+
+## Streamlit Demonstration
+
+The project includes a Streamlit interface for demonstrating the final ResNet routing pipeline.
+
+Users can upload:
+
+- PNG
+- JPG / JPEG
+- PDF — first page only
+
+The interface displays:
+
+- Uploaded document
+- Predicted document type
+- Predicted department
+- Route confidence
+- Automatic-routing or manual-review decision
+- Class-probability chart
+
+### Run the Demo
+
+From the project root:
+
+```powershell
+python -m streamlit run src/demo/app.py
+```
+
+---
+
+## Model Checkpoint
+
+The final ResNet checkpoint is excluded from Git because model files are ignored by `.gitignore`.
+
+To use the real trained model, place the checkpoint at:
+
+```text
+models/best_resnet18.pt
+```
+
+If the checkpoint is missing, the demo falls back to a clearly labelled **placeholder mode** and does not produce real model predictions.
 
 ---
 
@@ -145,25 +247,36 @@ neural-nexus-document-router/
 |   |   `-- mauritian_test_metadata.csv
 |
 |-- models/
+|   |-- .gitkeep
+|   `-- best_resnet18.pt
 |
 |-- outputs/
+|   |-- baseline/
+|   |-- deep_learning/
 |   |-- figures/
 |   |-- mauritian_evaluation/
 |   |-- metrics/
-|   `-- predictions/
+|   |-- ocr_audit/
+|   |-- predictions/
+|   `-- preprocessing_tests/
 |
 |-- src/
 |   |-- baseline/
 |   |-- data/
 |   |-- demo/
+|   |   |-- app.py
+|   |   `-- predictor.py
 |   |-- evaluation/
+|   |   |-- error_analysis.py
+|   |   |-- metrics.py
+|   |   |-- probs_to_predictions.py
+|   |   |-- run_evaluation.py
+|   |   `-- thresholding.py
 |   |-- models/
 |   |-- preprocessing/
 |   `-- config.py
 |
 |-- tests/
-|
-|-- main.py
 |-- requirements.txt
 |-- README.md
 `-- .gitignore
@@ -171,180 +284,212 @@ neural-nexus-document-router/
 
 ---
 
-## Data Pipeline
-
-The main dataset-related scripts are located in:
-
-```text
-src/data/
-```
-
-Important scripts include:
-
-```text
-inspect_rvl_cdip.py
-sample_rvl_cdip.py
-extract_sampled_images.py
-create_dataset_split.py
-validate_config.py
-validate_final_dataset.py
-prepare_mauritian_test.py
-validate_mauritian_test.py
-validate_prepared_mauritian_test.py
-```
-
-These scripts support dataset inspection, reproducible sampling, extraction, splitting and validation.
-
----
-
-## Python Version
-
-The project uses:
-
-```text
-Python 3.11
-```
-
----
-
 ## Setup
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/fxrhxxn/neural-nexus-document-router/tree/main
+git clone https://github.com/fxrhxxn/neural-nexus-document-router.git
 cd neural-nexus-document-router
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Python 3.11 Virtual Environment
 
 #### Windows
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\activate
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
 ```
 
 #### macOS / Linux
 
 ```bash
-python3 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3. Install Dependencies
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+### 4. Add the Final ResNet Checkpoint
+
+Place:
+
+```text
+best_resnet18.pt
+```
+
+inside:
+
+```text
+models/
+```
+
+### 5. Run the Streamlit Demo
+
+```bash
+python -m streamlit run src/demo/app.py
 ```
 
 ---
 
-## Team
+## Recorded Baseline Configuration and Software Versions
 
-### Farhaan Hassam
-**Team Leader / Data Pipeline**
+The following configuration was recorded for the **OCR + TF-IDF + Logistic Regression baseline**.
 
-Responsibilities include:
-
-- overall project coordination;
-- RVL-CDIP sampling;
-- random-seed fixation;
-- stratified dataset splitting;
-- dataset validation;
-- Mauritian external evaluation dataset preparation;
-- project integration and submission management.
-
-### Christa Mungada
-**Preprocessing, OCR and Baseline**
-
-Responsibilities include:
-
-- image preprocessing;
-- OCR experiments;
-- OCR quality analysis;
-- text extraction;
-- TF-IDF feature generation;
-- Logistic Regression baseline.
-
-### Parisha Chooromonay
-**Deep Learning and Architecture**
-
-Responsibilities include:
-
-- ResNet-18 document classification;
-- deep-learning model development;
-- model training and fine-tuning;
-- investigation of text-based and multimodal architectures where feasible.
-
-### Uddish Reetoo
-**Evaluation, Thresholding and Demo**
-
-Responsibilities include:
-
-- model evaluation;
-- confusion matrices;
-- error analysis;
-- confidence-threshold analysis;
-- coverage-versus-accuracy analysis;
-- manual-review logic;
-- demonstration interface.
+| Setting | Recorded Value |
+|---|---|
+| OCR variant | Raw |
+| TF-IDF lowercase | True |
+| TF-IDF accent handling | Unicode accent stripping |
+| TF-IDF n-grams | (1,2) — unigrams and bigrams |
+| Maximum TF-IDF features | 100,000 |
+| Sublinear term frequency | True |
+| Logistic Regression max iterations | 2000 |
+| Random seed / random state | 42 |
+| Python | 3.11.1 |
+| Scikit-learn | 1.9.1 |
+| SciPy | 1.18.1 |
+| NumPy | 2.5.3 |
+| Pandas | 3.0.6 |
 
 ---
 
 ## Evaluation
 
-The project considers both document-level classification and routing performance.
+Evaluation was performed at both document-class and routing level.
 
-Important evaluation measures include:
+### Document-Level Metrics
 
 - Accuracy
-- Macro Precision
-- Macro Recall
-- Macro F1-score
-- Per-class performance
-- Confusion matrices
-- Invoice recall
+- Macro-F1
+- Per-class precision and recall
+- Confusion matrix
+
+### Routing-Level Metrics
+
 - Routing accuracy
-- Routing Macro F1
-- Confidence-based coverage and accuracy
+- Routing macro-F1
+- Route confidence
+- Coverage versus accuracy
+- Manual-review rate
+- Silent routing errors
+- Invoice recall
 
-Final evaluation is performed using the held-out RVL-CDIP test set.
+The project distinguishes classification errors from routing errors because an incorrect document class may still map to the correct department.
 
-A separate qualitative evaluation is also conducted using the Mauritian document set.
+---
+
+## Key Findings
+
+- The OCR + TF-IDF baseline achieved **0.8288 routing macro-F1**.
+- Frozen ImageNet features alone were insufficient.
+- Partial ResNet fine-tuning produced the largest improvement.
+- Light augmentation produced a smaller additional improvement.
+- The final ResNet achieved **0.8445 validation routing macro-F1** and **0.8373 test routing macro-F1**.
+- Confidence thresholding improved the reliability of automatically routed documents but reduced coverage.
+- High-confidence routing errors still occurred, showing that confidence alone cannot guarantee correctness.
+- Visually similar classes such as forms, questionnaires, letters and memos remained challenging.
+- The current Streamlit demo uses the **image-based ResNet pipeline only**.
 
 ---
 
 ## Limitations
 
-The project has several limitations.
-
-- Only nine RVL-CDIP document classes are used.
-- The external Mauritian dataset is relatively small and should not be considered statistically representative of all Mauritian organisations.
-- OCR quality may decrease for low-quality scans or handwritten documents.
-- Document layout and terminology may differ from the RVL-CDIP training data.
-- Confidence scores do not guarantee that a prediction is correct.
-- The prototype focuses on classification and routing rather than a complete enterprise document-management workflow.
+- Only nine RVL-CDIP classes are used.
+- The ResNet model showed signs of overfitting.
+- The final demo is image-only and does not combine the OCR baseline with the ResNet model.
+- Visually similar classes remain difficult to distinguish.
+- Confidence scores do not guarantee correctness.
+- OCR quality can degrade on poor-quality or handwritten scans.
+- The OCR audit used only 10 documents across 5 of the 9 classes.
+- The Mauritian evaluation set is small and not statistically representative.
+- The Streamlit demo processes only the first page of PDFs.
+- The trained ResNet checkpoint is not stored in the repository.
 
 ---
 
 ## Future Work
 
-Possible extensions include:
+Possible improvements include:
 
-- larger Mauritian document datasets;
-- more document classes;
-- improved handwriting recognition;
-- multilingual document processing;
-- transformer-based text classification;
-- multimodal fusion of textual and visual features;
-- stronger confidence calibration;
-- document-level processing of complete multi-page files;
-- integration with real document-management systems;
-- continuous human-feedback and model-retraining workflows.
+- Combining the ResNet image classifier with the OCR-based text classifier
+- Transformer-based text classification using models such as DistilBERT
+- Multimodal fusion of textual and visual features
+- Stronger regularisation and augmentation
+- Larger English and French Mauritian evaluation datasets
+- Confidence calibration
+- Multi-page document processing
+- Improved handwriting recognition
+- Integration with enterprise document-management systems
+
+---
+
+## Team Contributions
+
+### Farhaan Hassam
+**Team Leader / Data Pipeline**
+
+- Project coordination
+- RVL-CDIP sampling
+- Random-seed fixation
+- Stratified train/validation/test splitting
+- Dataset validation
+- Mauritian external evaluation set
+- Project integration and submission management
+
+### Christa Mungada
+**Preprocessing, OCR and Baseline**
+
+- Image preprocessing
+- OCR experiments
+- OCR quality analysis
+- OCR text extraction
+- TF-IDF feature generation
+- Logistic Regression baseline
+
+### Parisha Chooromonay
+**Deep Learning**
+
+- ResNet-18 image-classification pipeline
+- Model training
+- Frozen-backbone experiments
+- Partial fine-tuning
+- Augmentation experiments
+- Final checkpoint selection
+
+### Uddish Reetoo
+**Evaluation, Thresholding and Demo**
+
+- Model evaluation
+- Confusion matrices
+- Error analysis
+- Confidence-threshold analysis
+- Coverage-versus-accuracy analysis
+- Manual-review logic
+- Streamlit demonstration interface
 
 ---
 
 ## Academic Context
 
 This project was developed for the **MA6700 Applied AI and Machine Learning** module as a group assignment by **Team Neural Nexus**.
+
+---
+
+## References
+
+Harley, A.W., Ufkes, A. and Derpanis, K.G. (2015) ‘Evaluation of deep convolutional nets for document image classification and retrieval’, *Proceedings of the 13th International Conference on Document Analysis and Recognition (ICDAR)*.
+
+He, K., Zhang, X., Ren, S. and Sun, J. (2016) ‘Deep residual learning for image recognition’, *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 770–778.
+
+Smith, R. (2007) ‘An overview of the Tesseract OCR engine’, *Proceedings of the Ninth International Conference on Document Analysis and Recognition*, pp. 629–633.
+
+Salton, G. and Buckley, C. (1988) ‘Term-weighting approaches in automatic text retrieval’, *Information Processing & Management*, 24(5), pp. 513–523.
+
+Chan814 (n.d.) *RVL-CDIP dataset*. Hugging Face Datasets.
