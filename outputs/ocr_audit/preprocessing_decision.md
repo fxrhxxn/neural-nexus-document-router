@@ -1,88 +1,83 @@
-\# OCR Preprocessing Decision
+# OCR Preprocessing Decision
 
+**Project:** Neural Nexus Document Router
+**Work package:** Preprocessing, OCR and baseline (branch `christa/ocr-baseline`)
+**Evidence:** `outputs/ocr_audit/ocr_quality_audit.csv` and `outputs/ocr_audit/ocr_audit_summary.csv`
 
+---
 
-\## 1. Decision
+## 1. Decision
 
+Use **raw-image OCR** as the baseline input for the text classifier, and keep the **Otsu pipeline** as a candidate for further evaluation.
 
+The Otsu pipeline is grayscale conversion, 1.5x cubic upscaling and global Otsu thresholding, applied together. Because these steps were never tested separately, any difference between raw and Otsu output cannot be credited to thresholding alone.
 
-Retain raw-image OCR as the baseline and evaluate the existing Otsu preprocessing pipeline as an alternative. The ten-document manual audit does not establish that Otsu preprocessing is generally superior to raw OCR.
+The ten-document manual audit does not show that Otsu is generally better than raw OCR, so the simpler pipeline remains the default.
 
+---
 
+## 2. Evidence from the manual audit
 
-The Otsu pipeline combines grayscale conversion, 1.5× upscaling and Otsu thresholding. Consequently, observed differences cannot be attributed to thresholding alone.
+**Method.** Ten training documents (seed 42) were read and scored for both raw and Otsu OCR text: two each from invoice, letter, form, resume and handwritten. Each text was scored 0 (unusable), 1 (partly readable) or 2 (mostly readable), judged against the original image, and one variant was preferred per document. No reference transcriptions exist, so these scores are readability judgements, not OCR accuracy, CER or WER.
 
+**Overall result.**
 
+| Measure | Raw | Otsu |
+|---|---|---|
+| Mean manual score | 1.4 | 1.4 |
+| Documents scored 2 / 1 / 0 | 5 / 4 / 1 | 6 / 2 / 2 |
+| Documents preferred | 4 | 6 |
 
-\## 2. Evidence from the Manual Audit
+Otsu scored higher on 1 document, the same on 8, and lower on 1. Four of the ten preferences were close calls: where outputs were effectively tied, raw was chosen by convention. The 6-to-4 preference split is therefore weak evidence.
 
+**By document class.**
 
+| Class | Mean raw | Mean Otsu | Observation |
+|---|---|---|---|
+| Form | 1.0 | 1.5 | Otsu recovered clearer printed headings (for example a fax cover sheet header). Table data stayed unusable in both. |
+| Invoice | 1.5 | 1.5 | Mixed. Otsu recovered the total on one invoice; raw kept cleaner wording on the other. |
+| Letter | 2.0 | 2.0 | Otsu recovered the letterhead and addressee on one letter; the other was a tie. |
+| Resume | 2.0 | 2.0 | Both readable. Otsu was cleaner on field labels and dates, but years were misread in both. |
+| Handwritten | 0.5 | 0.0 | Otsu was worse. It thickened ruled lines into junk text and lost phrases and the date that raw kept. One letter was legible to a human, but both outputs lost almost all of it. |
 
-The audit covers ten training documents from five of the nine selected classes: invoice, letter, form, resume and handwritten.
+These results suggest that the effect of preprocessing depends on document type and image quality. A single global setting is therefore not supported.
 
+**Automatic proxies.** Character count, word count and alphabetic-token ratio were recorded for each output. They are diagnostics only. More extracted text can mean more recovered content or more noise, and the alphabetic ratio is not a dictionary check. One handwritten document scored 0.82 on that ratio while its OCR was nearly unusable.
 
+---
 
-The mean manual quality score was 1.4 for both raw OCR and Otsu OCR, using a scale from 0 (unusable) to 2 (mostly readable). Otsu was preferred for six documents and raw OCR for four. However, the manual scores were equal for eight documents, so these preferences reflect differences in the content recovered, errors introduced and readability of the extracted text.
+## 3. Limitations
 
+- The audit has only ten documents and covers five of the nine classes. Budget, email, memo and questionnaire were not sampled.
+- Scores and preferences are subjective and come from one reviewer.
+- There are no reference transcriptions, so CER and WER were not calculated.
+- Grayscale conversion, upscaling and thresholding were applied together, so their separate effects are unknown.
+- Ten documents cannot represent the range of layouts, scan quality, text density and handwriting in the full dataset.
+- The raw-versus-Otsu comparison used OCR text quality only. It was not tested against classification performance.
 
+---
 
-Otsu recovered additional printed headings and text in some invoice, letter and form examples. In contrast, it performed poorly on the handwritten examples, where it lost useful content and introduced noise from ruled lines. These results suggest that preprocessing effectiveness may depend on document type and image characteristics.
+## 4. Additional training-only checks (proposed)
 
+These checks have not yet been completed. The baseline in `outputs/baseline/` was trained on raw OCR only.
 
+1. Run raw and Otsu OCR on the same training images with identical Tesseract settings.
+2. Extend the comparison to a larger, reproducibly selected training sample covering all nine classes.
+3. Record empty or very short outputs, character counts, word counts and alphabetic-token ratios for both variants.
+4. Inspect representative successes and failures per class, noting missing text, misrecognition, reading-order problems and preprocessing noise.
+5. If reliable transcriptions can be prepared for a small sample, calculate CER and WER on that sample.
+6. Record the Tesseract version, preprocessing parameters, source image identifiers and seed.
+7. Compare raw and Otsu text in the TF-IDF and Logistic Regression baseline, fitting on train only and judging on validation.
 
-Character counts, word counts and alphabetic-token ratios provide useful diagnostic information, but they cannot establish OCR accuracy because additional extracted text may also contain errors or noise.
+The test set must not be used to choose preprocessing parameters. It stays reserved until the final agreed evaluation. Validation data may be used only under the predefined model-selection procedure.
 
+Preprocessing must also not depend on a document's true class. The class is unknown for incoming documents, so per-class findings are diagnostic only.
 
+---
 
-\## 3. Limitations
+## 5. Implementation decision
 
-
-
-\- The audit contains only ten documents and does not cover the budget, email, memo or questionnaire classes.
-
-\- Manual quality scores and preferred-variant judgements are subjective.
-
-\- No verified reference transcriptions were used to calculate character error rate (CER) or word error rate (WER).
-
-\- Grayscale conversion, upscaling and thresholding were applied together, so their individual contributions cannot be isolated.
-
-\- The small sample may not represent the range of layouts, image quality, text density and handwriting in the dataset.
-
-\- The results are exploratory and do not support a general claim that either preprocessing method is superior.
-
-
-
-\## 4. Additional Training-Only Checks
-
-
-
-1\. Compare raw and Otsu OCR on the same source images using identical OCR engine settings.
-
-2\. Extend the comparison to a larger, reproducibly selected sample from the training split, covering all nine document classes.
-
-3\. Record empty or unusually short outputs, character counts, word counts and alphabetic-token ratios for both variants.
-
-4\. Manually inspect representative successes and failures from each class, documenting missing text, misrecognition, reading-order problems and preprocessing noise.
-
-5\. If reliable reference transcriptions can be prepared, calculate CER and WER for the explicitly transcribed training sample.
-
-6\. Record the OCR engine and version, preprocessing parameters, source image identifiers and random seed.
-
-7\. Cache OCR outputs and record processing status so interrupted extraction runs can resume without repeating completed work.
-
-
-
-These checks must not use the reserved test set to choose preprocessing parameters. Keep the test set untouched until the planned final evaluation. Use validation data only according to the predefined model-selection and evaluation procedure.
-
-
-
-\## 5. Implementation Decision
-
-
-
-Preserve raw OCR as the baseline and retain Otsu as a candidate for further evaluation. Keep preprocessing configurations explicit and reproducible.
-
-
-
-Do not select Otsu solely because it was preferred for six of the ten audited documents. Make the final decision after reviewing the broader training-only evidence and planned validation results. If the evidence remains inconclusive, retain the simpler raw OCR pipeline as the default rather than claiming an unsupported improvement.
-
+- Keep raw OCR as the baseline and as the default pipeline.
+- Keep Otsu available as an explicit, reproducible option (`--variant otsu` in `src/preprocessing/extract_ocr_dataset.py`).
+- Do not switch to Otsu on the basis of six preferences out of ten when the mean scores are identical.
+- Make the final choice after the broader training-only checks and the planned validation comparison. If the evidence stays inconclusive, keep raw OCR rather than claim an unsupported improvement.
