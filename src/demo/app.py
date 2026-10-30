@@ -43,7 +43,7 @@ if uploaded is not None:
     image = load_scan(uploaded)
     st.image(image, caption="Uploaded scan", use_container_width=True)
 
-    # TODO: OCR preview goes here once Christa's OCR inference steps arrive.
+    # Future work: show the OCR text next to the prediction.
 
     probs = predict_document(image)
     result = route_single_document(probs, TAU)
