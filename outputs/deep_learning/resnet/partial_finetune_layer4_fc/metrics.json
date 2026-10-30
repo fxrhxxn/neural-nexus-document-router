@@ -1,0 +1,7 @@
+{
+  "best_epoch": 8,
+  "document_accuracy": 0.7837301587301587,
+  "document_macro_f1": 0.7830564009495329,
+  "routing_accuracy": 0.8343253968253969,
+  "routing_macro_f1": 0.8420951295612227
+}

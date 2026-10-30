@@ -1,0 +1,2 @@
+threshold,auto_routed_pct,manual_review_pct,low_confidence_pct,handwritten_pct,auto_routed_accuracy_pct
+0.95,56.538839724680436,43.461160275319564,31.071779744346117,12.389380530973451,94.95652173913044

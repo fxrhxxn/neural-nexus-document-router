@@ -1,0 +1,34 @@
+{
+  "run_id": "cfcc31a6e99e",
+  "model": "TF-IDF + Logistic Regression",
+  "ocr_variant": "raw",
+  "random_seed": 42,
+  "training_records": 4725,
+  "validation_records": 1008,
+  "classes": [
+    "budget",
+    "email",
+    "form",
+    "handwritten",
+    "invoice",
+    "letter",
+    "memo",
+    "questionnaire",
+    "resume"
+  ],
+  "accuracy": 0.7807539682539683,
+  "macro_f1": 0.7857540983506921,
+  "weighted_f1": 0.7857540983506921,
+  "empty_training_texts": 79,
+  "empty_validation_texts": 22,
+  "test_split_used": false,
+  "train_validation_source_overlap": 0,
+  "elapsed_seconds": 9.75,
+  "software_versions": {
+    "python_version": "3.13.11",
+    "scikit_learn_version": "1.9.1",
+    "scipy_version": "1.18.1",
+    "numpy_version": "2.5.3",
+    "pandas_version": "3.0.6"
+  }
+}

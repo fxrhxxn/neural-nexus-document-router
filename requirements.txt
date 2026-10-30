@@ -1,9 +1,32 @@
+# Core data and numerical processing
 numpy
 pandas
+
+# Machine learning
 scikit-learn
+
+# Visualisation
 matplotlib
+
+# Image processing
 Pillow
+opencv-python
+
+# OCR
+pytesseract
+
+# PDF processing
+pymupdf
+
+# Dataset access
 datasets
+
+# Deep learning
 torch
 torchvision
+
+# Transformer models
 transformers
+
+# Demo
+streamlit
