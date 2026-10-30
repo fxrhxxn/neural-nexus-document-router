@@ -219,6 +219,12 @@ From the project root:
 python -m streamlit run src/demo/app.py
 ```
 
+Run Version 2 from the project root with:
+
+```powershell
+streamlit run src/demo/app_v2.py
+```
+
 ---
 
 ## Model Checkpoint
