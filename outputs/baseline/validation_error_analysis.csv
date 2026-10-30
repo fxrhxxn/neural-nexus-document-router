@@ -1,0 +1,222 @@
+source_index,true_class,routing_outcome,image_path,split,predicted_class,correct,ocr_character_count,confidence,true_routing_outcome,predicted_routing_outcome,classification_correct,routing_correct
+37293,budget,Finance,data/sampled/budget/budget_37293.png,validation,invoice,False,514,0.3701935490135228,Finance,Finance,False,True
+135284,invoice,Finance,data/sampled/invoice/invoice_135284.png,validation,budget,False,214,0.2555309682737187,Finance,Finance,False,True
+96180,form,Administration,data/sampled/form/form_96180.png,validation,invoice,False,934,0.2330033043333473,Administration,Finance,False,False
+100261,handwritten,Manual Review,data/sampled/handwritten/handwritten_100261.png,validation,invoice,False,520,0.2031000306461791,Manual Review,Finance,False,False
+135534,invoice,Finance,data/sampled/invoice/invoice_135534.png,validation,budget,False,302,0.3325840747332643,Finance,Finance,False,True
+259161,resume,HR,data/sampled/resume/resume_259161.png,validation,letter,False,2942,0.2200663904334532,HR,Correspondence,False,False
+166246,memo,Correspondence,data/sampled/memo/memo_166246.png,validation,letter,False,699,0.3747490733545374,Correspondence,Correspondence,False,True
+242969,resume,HR,data/sampled/resume/resume_242969.png,validation,handwritten,False,134,0.2579497179897211,HR,Manual Review,False,False
+150424,letter,Correspondence,data/sampled/letter/letter_150424.png,validation,memo,False,943,0.3652443623128678,Correspondence,Correspondence,False,True
+231568,questionnaire,Administration,data/sampled/questionnaire/questionnaire_231568.png,validation,handwritten,False,1132,0.4213295204868429,Administration,Manual Review,False,False
+120675,invoice,Finance,data/sampled/invoice/invoice_120675.png,validation,budget,False,189,0.4868067325018833,Finance,Finance,False,True
+177441,memo,Correspondence,data/sampled/memo/memo_177441.png,validation,letter,False,1710,0.3142145360994176,Correspondence,Correspondence,False,True
+24407,budget,Finance,data/sampled/budget/budget_24407.png,validation,handwritten,False,29,0.1968425904951762,Finance,Manual Review,False,False
+80502,form,Administration,data/sampled/form/form_80502.png,validation,memo,False,1984,0.1952937413116861,Administration,Correspondence,False,False
+38387,budget,Finance,data/sampled/budget/budget_38387.png,validation,letter,False,1574,0.3473217372463591,Finance,Correspondence,False,False
+156168,letter,Correspondence,data/sampled/letter/letter_156168.png,validation,form,False,1274,0.3827480428040762,Correspondence,Administration,False,False
+54355,email,Correspondence,data/sampled/email/email_54355.png,validation,handwritten,False,2173,0.2186058825719792,Correspondence,Manual Review,False,False
+133714,invoice,Finance,data/sampled/invoice/invoice_133714.png,validation,form,False,633,0.5431184188369965,Finance,Administration,False,False
+176631,memo,Correspondence,data/sampled/memo/memo_176631.png,validation,handwritten,False,0,0.2810853016265225,Correspondence,Manual Review,False,False
+83171,form,Administration,data/sampled/form/form_83171.png,validation,letter,False,2094,0.2133486443545278,Administration,Correspondence,False,False
+35064,budget,Finance,data/sampled/budget/budget_35064.png,validation,handwritten,False,602,0.2751098250122739,Finance,Manual Review,False,False
+225797,questionnaire,Administration,data/sampled/questionnaire/questionnaire_225797.png,validation,handwritten,False,33,0.320683237649931,Administration,Manual Review,False,False
+228065,questionnaire,Administration,data/sampled/questionnaire/questionnaire_228065.png,validation,budget,False,157,0.2205405824167713,Administration,Finance,False,False
+158119,letter,Correspondence,data/sampled/letter/letter_158119.png,validation,invoice,False,995,0.2117945793462081,Correspondence,Finance,False,False
+137068,invoice,Finance,data/sampled/invoice/invoice_137068.png,validation,handwritten,False,151,0.2545677618722859,Finance,Manual Review,False,False
+28345,budget,Finance,data/sampled/budget/budget_28345.png,validation,handwritten,False,158,0.3024269992169753,Finance,Manual Review,False,False
+168561,memo,Correspondence,data/sampled/memo/memo_168561.png,validation,budget,False,1140,0.4725299377155386,Correspondence,Finance,False,False
+90025,form,Administration,data/sampled/form/form_90025.png,validation,handwritten,False,24,0.2418582257994266,Administration,Manual Review,False,False
+137329,invoice,Finance,data/sampled/invoice/invoice_137329.png,validation,handwritten,False,0,0.2810853016265225,Finance,Manual Review,False,False
+36713,budget,Finance,data/sampled/budget/budget_36713.png,validation,handwritten,False,1298,0.3222537872003482,Finance,Manual Review,False,False
+165404,memo,Correspondence,data/sampled/memo/memo_165404.png,validation,letter,False,1498,0.3508875420974079,Correspondence,Correspondence,False,True
+238024,questionnaire,Administration,data/sampled/questionnaire/questionnaire_238024.png,validation,handwritten,False,117,0.263095571754031,Administration,Manual Review,False,False
+222567,questionnaire,Administration,data/sampled/questionnaire/questionnaire_222567.png,validation,letter,False,2894,0.3537863200703255,Administration,Correspondence,False,False
+25195,budget,Finance,data/sampled/budget/budget_25195.png,validation,handwritten,False,882,0.2578272848577674,Finance,Manual Review,False,False
+169726,memo,Correspondence,data/sampled/memo/memo_169726.png,validation,handwritten,False,101,0.250959773769691,Correspondence,Manual Review,False,False
+132445,invoice,Finance,data/sampled/invoice/invoice_132445.png,validation,letter,False,809,0.3725356869007638,Finance,Correspondence,False,False
+45706,email,Correspondence,data/sampled/email/email_45706.png,validation,memo,False,801,0.2211284173099199,Correspondence,Correspondence,False,True
+112598,handwritten,Manual Review,data/sampled/handwritten/handwritten_112598.png,validation,questionnaire,False,1290,0.2837144136904954,Manual Review,Administration,False,False
+87468,form,Administration,data/sampled/form/form_87468.png,validation,handwritten,False,97,0.2458540457774143,Administration,Manual Review,False,False
+146108,letter,Correspondence,data/sampled/letter/letter_146108.png,validation,invoice,False,1106,0.3431659073467079,Correspondence,Finance,False,False
+20663,budget,Finance,data/sampled/budget/budget_20663.png,validation,letter,False,945,0.4090628828637493,Finance,Correspondence,False,False
+174440,memo,Correspondence,data/sampled/memo/memo_174440.png,validation,letter,False,1288,0.334380892586659,Correspondence,Correspondence,False,True
+90133,form,Administration,data/sampled/form/form_90133.png,validation,letter,False,4362,0.2486883614640125,Administration,Correspondence,False,False
+227458,questionnaire,Administration,data/sampled/questionnaire/questionnaire_227458.png,validation,handwritten,False,489,0.2480497608473707,Administration,Manual Review,False,False
+133753,invoice,Finance,data/sampled/invoice/invoice_133753.png,validation,letter,False,896,0.2540467619624242,Finance,Correspondence,False,False
+163185,memo,Correspondence,data/sampled/memo/memo_163185.png,validation,letter,False,1087,0.2626719222459222,Correspondence,Correspondence,False,True
+145966,letter,Correspondence,data/sampled/letter/letter_145966.png,validation,handwritten,False,74,0.1910363759098655,Correspondence,Manual Review,False,False
+87968,form,Administration,data/sampled/form/form_87968.png,validation,letter,False,1364,0.2153434853215521,Administration,Correspondence,False,False
+179895,memo,Correspondence,data/sampled/memo/memo_179895.png,validation,handwritten,False,125,0.303356072413274,Correspondence,Manual Review,False,False
+84994,form,Administration,data/sampled/form/form_84994.png,validation,memo,False,318,0.171303914045356,Administration,Correspondence,False,False
+115588,handwritten,Manual Review,data/sampled/handwritten/handwritten_115588.png,validation,questionnaire,False,1295,0.6239294211419246,Manual Review,Administration,False,False
+127958,invoice,Finance,data/sampled/invoice/invoice_127958.png,validation,letter,False,621,0.339561126761307,Finance,Correspondence,False,False
+38282,budget,Finance,data/sampled/budget/budget_38282.png,validation,form,False,604,0.1833554011620859,Finance,Administration,False,False
+81658,form,Administration,data/sampled/form/form_81658.png,validation,handwritten,False,296,0.4119466943139661,Administration,Manual Review,False,False
+129720,invoice,Finance,data/sampled/invoice/invoice_129720.png,validation,handwritten,False,625,0.2502971771759037,Finance,Manual Review,False,False
+142648,letter,Correspondence,data/sampled/letter/letter_142648.png,validation,budget,False,215,0.2343928236930366,Correspondence,Finance,False,False
+101759,handwritten,Manual Review,data/sampled/handwritten/handwritten_101759.png,validation,questionnaire,False,746,0.2601093475747462,Manual Review,Administration,False,False
+139837,invoice,Finance,data/sampled/invoice/invoice_139837.png,validation,form,False,1275,0.2742428423636335,Finance,Administration,False,False
+88203,form,Administration,data/sampled/form/form_88203.png,validation,handwritten,False,9,0.2810853016265225,Administration,Manual Review,False,False
+32347,budget,Finance,data/sampled/budget/budget_32347.png,validation,handwritten,False,274,0.2965942745988218,Finance,Manual Review,False,False
+85334,form,Administration,data/sampled/form/form_85334.png,validation,budget,False,1104,0.2767430525664428,Administration,Finance,False,False
+126738,invoice,Finance,data/sampled/invoice/invoice_126738.png,validation,handwritten,False,0,0.2810853016265225,Finance,Manual Review,False,False
+83882,form,Administration,data/sampled/form/form_83882.png,validation,letter,False,1090,0.2835144647278555,Administration,Correspondence,False,False
+150961,letter,Correspondence,data/sampled/letter/letter_150961.png,validation,memo,False,1462,0.351103003829633,Correspondence,Correspondence,False,True
+121839,invoice,Finance,data/sampled/invoice/invoice_121839.png,validation,handwritten,False,183,0.2534392619576342,Finance,Manual Review,False,False
+96810,form,Administration,data/sampled/form/form_96810.png,validation,memo,False,797,0.2416255474065059,Administration,Correspondence,False,False
+93261,form,Administration,data/sampled/form/form_93261.png,validation,memo,False,1827,0.2556760694395314,Administration,Correspondence,False,False
+25697,budget,Finance,data/sampled/budget/budget_25697.png,validation,handwritten,False,29,0.197158105737764,Finance,Manual Review,False,False
+149381,letter,Correspondence,data/sampled/letter/letter_149381.png,validation,memo,False,690,0.3887252322777621,Correspondence,Correspondence,False,True
+104251,handwritten,Manual Review,data/sampled/handwritten/handwritten_104251.png,validation,form,False,408,0.2912184406775198,Manual Review,Administration,False,False
+154709,letter,Correspondence,data/sampled/letter/letter_154709.png,validation,memo,False,1819,0.320450725749747,Correspondence,Correspondence,False,True
+93579,form,Administration,data/sampled/form/form_93579.png,validation,memo,False,2421,0.2304956740176642,Administration,Correspondence,False,False
+235217,questionnaire,Administration,data/sampled/questionnaire/questionnaire_235217.png,validation,letter,False,1646,0.2861950716970437,Administration,Correspondence,False,False
+224410,questionnaire,Administration,data/sampled/questionnaire/questionnaire_224410.png,validation,handwritten,False,417,0.206183831729625,Administration,Manual Review,False,False
+28540,budget,Finance,data/sampled/budget/budget_28540.png,validation,handwritten,False,322,0.386691110554231,Finance,Manual Review,False,False
+20781,budget,Finance,data/sampled/budget/budget_20781.png,validation,memo,False,1464,0.2512391748122085,Finance,Correspondence,False,False
+169579,memo,Correspondence,data/sampled/memo/memo_169579.png,validation,form,False,420,0.2712715373548412,Correspondence,Administration,False,False
+37003,budget,Finance,data/sampled/budget/budget_37003.png,validation,handwritten,False,24,0.3276091277364031,Finance,Manual Review,False,False
+146281,letter,Correspondence,data/sampled/letter/letter_146281.png,validation,questionnaire,False,1440,0.3778293651477653,Correspondence,Administration,False,False
+225157,questionnaire,Administration,data/sampled/questionnaire/questionnaire_225157.png,validation,budget,False,148,0.2381869097397224,Administration,Finance,False,False
+154600,letter,Correspondence,data/sampled/letter/letter_154600.png,validation,memo,False,627,0.3048034451765362,Correspondence,Correspondence,False,True
+148451,letter,Correspondence,data/sampled/letter/letter_148451.png,validation,memo,False,1731,0.3807940559847977,Correspondence,Correspondence,False,True
+104907,handwritten,Manual Review,data/sampled/handwritten/handwritten_104907.png,validation,budget,False,525,0.2309317280875409,Manual Review,Finance,False,False
+177876,memo,Correspondence,data/sampled/memo/memo_177876.png,validation,form,False,840,0.3403142848622663,Correspondence,Administration,False,False
+146051,letter,Correspondence,data/sampled/letter/letter_146051.png,validation,memo,False,712,0.2115198679016953,Correspondence,Correspondence,False,True
+131949,invoice,Finance,data/sampled/invoice/invoice_131949.png,validation,budget,False,620,0.2277798951900512,Finance,Finance,False,True
+20012,budget,Finance,data/sampled/budget/budget_20012.png,validation,invoice,False,638,0.2438509994636961,Finance,Finance,False,True
+95649,form,Administration,data/sampled/form/form_95649.png,validation,handwritten,False,343,0.3659968420682927,Administration,Manual Review,False,False
+98346,form,Administration,data/sampled/form/form_98346.png,validation,letter,False,1428,0.2950717103183056,Administration,Correspondence,False,False
+236610,questionnaire,Administration,data/sampled/questionnaire/questionnaire_236610.png,validation,memo,False,1545,0.2788287357124419,Administration,Correspondence,False,False
+226940,questionnaire,Administration,data/sampled/questionnaire/questionnaire_226940.png,validation,handwritten,False,41,0.4846709151766402,Administration,Manual Review,False,False
+164935,memo,Correspondence,data/sampled/memo/memo_164935.png,validation,handwritten,False,78,0.2389481242661506,Correspondence,Manual Review,False,False
+37168,budget,Finance,data/sampled/budget/budget_37168.png,validation,handwritten,False,98,0.2814029732245904,Finance,Manual Review,False,False
+36306,budget,Finance,data/sampled/budget/budget_36306.png,validation,handwritten,False,349,0.3121992851068985,Finance,Manual Review,False,False
+228030,questionnaire,Administration,data/sampled/questionnaire/questionnaire_228030.png,validation,handwritten,False,12,0.2810853016265225,Administration,Manual Review,False,False
+99346,form,Administration,data/sampled/form/form_99346.png,validation,letter,False,1910,0.3006955318477401,Administration,Correspondence,False,False
+158474,letter,Correspondence,data/sampled/letter/letter_158474.png,validation,handwritten,False,51,0.3697486194845145,Correspondence,Manual Review,False,False
+57581,email,Correspondence,data/sampled/email/email_57581.png,validation,memo,False,302,0.1664736811487549,Correspondence,Correspondence,False,True
+48049,email,Correspondence,data/sampled/email/email_48049.png,validation,memo,False,1206,0.345612168849134,Correspondence,Correspondence,False,True
+20742,budget,Finance,data/sampled/budget/budget_20742.png,validation,handwritten,False,210,0.3591925716414933,Finance,Manual Review,False,False
+92492,form,Administration,data/sampled/form/form_92492.png,validation,handwritten,False,937,0.245129239172378,Administration,Manual Review,False,False
+126150,invoice,Finance,data/sampled/invoice/invoice_126150.png,validation,handwritten,False,10,0.2810853016265225,Finance,Manual Review,False,False
+145270,letter,Correspondence,data/sampled/letter/letter_145270.png,validation,resume,False,427,0.4264471703195779,Correspondence,HR,False,False
+93609,form,Administration,data/sampled/form/form_93609.png,validation,invoice,False,709,0.3070273903337789,Administration,Finance,False,False
+103461,handwritten,Manual Review,data/sampled/handwritten/handwritten_103461.png,validation,form,False,1044,0.1815062994911422,Manual Review,Administration,False,False
+234229,questionnaire,Administration,data/sampled/questionnaire/questionnaire_234229.png,validation,handwritten,False,0,0.2810853016265225,Administration,Manual Review,False,False
+166681,memo,Correspondence,data/sampled/memo/memo_166681.png,validation,handwritten,False,166,0.2296089614084765,Correspondence,Manual Review,False,False
+167490,memo,Correspondence,data/sampled/memo/memo_167490.png,validation,letter,False,2122,0.3983499292712638,Correspondence,Correspondence,False,True
+83549,form,Administration,data/sampled/form/form_83549.png,validation,memo,False,542,0.388216217420203,Administration,Correspondence,False,False
+109879,handwritten,Manual Review,data/sampled/handwritten/handwritten_109879.png,validation,budget,False,554,0.2194406167736469,Manual Review,Finance,False,False
+91562,form,Administration,data/sampled/form/form_91562.png,validation,budget,False,2528,0.2299596019975056,Administration,Finance,False,False
+231653,questionnaire,Administration,data/sampled/questionnaire/questionnaire_231653.png,validation,handwritten,False,1134,0.2988044257595019,Administration,Manual Review,False,False
+32437,budget,Finance,data/sampled/budget/budget_32437.png,validation,handwritten,False,31,0.2708704208504027,Finance,Manual Review,False,False
+86308,form,Administration,data/sampled/form/form_86308.png,validation,questionnaire,False,1518,0.2330287096498991,Administration,Administration,False,True
+91699,form,Administration,data/sampled/form/form_91699.png,validation,handwritten,False,957,0.3281889347963545,Administration,Manual Review,False,False
+232442,questionnaire,Administration,data/sampled/questionnaire/questionnaire_232442.png,validation,handwritten,False,353,0.4624896359207595,Administration,Manual Review,False,False
+30625,budget,Finance,data/sampled/budget/budget_30625.png,validation,handwritten,False,12,0.2810853016265225,Finance,Manual Review,False,False
+132832,invoice,Finance,data/sampled/invoice/invoice_132832.png,validation,budget,False,644,0.3427527916828948,Finance,Finance,False,True
+231264,questionnaire,Administration,data/sampled/questionnaire/questionnaire_231264.png,validation,handwritten,False,1217,0.512574456889301,Administration,Manual Review,False,False
+118175,handwritten,Manual Review,data/sampled/handwritten/handwritten_118175.png,validation,questionnaire,False,1454,0.4071480179420061,Manual Review,Administration,False,False
+80338,form,Administration,data/sampled/form/form_80338.png,validation,memo,False,2382,0.3158996825474369,Administration,Correspondence,False,False
+129194,invoice,Finance,data/sampled/invoice/invoice_129194.png,validation,handwritten,False,0,0.2810853016265225,Finance,Manual Review,False,False
+151272,letter,Correspondence,data/sampled/letter/letter_151272.png,validation,memo,False,436,0.2014360004271096,Correspondence,Correspondence,False,True
+36783,budget,Finance,data/sampled/budget/budget_36783.png,validation,invoice,False,636,0.2306565126354769,Finance,Finance,False,True
+151295,letter,Correspondence,data/sampled/letter/letter_151295.png,validation,form,False,997,0.2343430618092845,Correspondence,Administration,False,False
+98824,form,Administration,data/sampled/form/form_98824.png,validation,invoice,False,426,0.2596033632446959,Administration,Finance,False,False
+165218,memo,Correspondence,data/sampled/memo/memo_165218.png,validation,handwritten,False,311,0.1866358506973536,Correspondence,Manual Review,False,False
+221025,questionnaire,Administration,data/sampled/questionnaire/questionnaire_221025.png,validation,handwritten,False,370,0.1825076772870407,Administration,Manual Review,False,False
+30906,budget,Finance,data/sampled/budget/budget_30906.png,validation,handwritten,False,20,0.2615385499858141,Finance,Manual Review,False,False
+33262,budget,Finance,data/sampled/budget/budget_33262.png,validation,handwritten,False,19,0.3357938788032527,Finance,Manual Review,False,False
+142396,letter,Correspondence,data/sampled/letter/letter_142396.png,validation,memo,False,2133,0.3779642134459727,Correspondence,Correspondence,False,True
+98042,form,Administration,data/sampled/form/form_98042.png,validation,memo,False,730,0.3149065708476803,Administration,Correspondence,False,False
+233107,questionnaire,Administration,data/sampled/questionnaire/questionnaire_233107.png,validation,memo,False,1052,0.2370067657572742,Administration,Correspondence,False,False
+86943,form,Administration,data/sampled/form/form_86943.png,validation,handwritten,False,1275,0.2702336311771611,Administration,Manual Review,False,False
+117319,handwritten,Manual Review,data/sampled/handwritten/handwritten_117319.png,validation,questionnaire,False,124,0.4120097467336002,Manual Review,Administration,False,False
+122756,invoice,Finance,data/sampled/invoice/invoice_122756.png,validation,handwritten,False,497,0.3391099184180375,Finance,Manual Review,False,False
+55939,email,Correspondence,data/sampled/email/email_55939.png,validation,memo,False,1408,0.2959662586469609,Correspondence,Correspondence,False,True
+111405,handwritten,Manual Review,data/sampled/handwritten/handwritten_111405.png,validation,letter,False,1195,0.3265068798966816,Manual Review,Correspondence,False,False
+177094,memo,Correspondence,data/sampled/memo/memo_177094.png,validation,handwritten,False,351,0.1604531542891595,Correspondence,Manual Review,False,False
+125795,invoice,Finance,data/sampled/invoice/invoice_125795.png,validation,budget,False,86,0.2042480783941986,Finance,Finance,False,True
+94707,form,Administration,data/sampled/form/form_94707.png,validation,handwritten,False,1463,0.2687659554627327,Administration,Manual Review,False,False
+169932,memo,Correspondence,data/sampled/memo/memo_169932.png,validation,handwritten,False,294,0.2358872632950171,Correspondence,Manual Review,False,False
+239064,questionnaire,Administration,data/sampled/questionnaire/questionnaire_239064.png,validation,handwritten,False,130,0.2653066964271274,Administration,Manual Review,False,False
+145393,letter,Correspondence,data/sampled/letter/letter_145393.png,validation,memo,False,1664,0.3628144149689336,Correspondence,Correspondence,False,True
+32897,budget,Finance,data/sampled/budget/budget_32897.png,validation,form,False,567,0.3705837573341727,Finance,Administration,False,False
+86634,form,Administration,data/sampled/form/form_86634.png,validation,invoice,False,267,0.246332731052691,Administration,Finance,False,False
+229766,questionnaire,Administration,data/sampled/questionnaire/questionnaire_229766.png,validation,letter,False,918,0.2931662075275327,Administration,Correspondence,False,False
+130325,invoice,Finance,data/sampled/invoice/invoice_130325.png,validation,handwritten,False,28,0.2549952748281412,Finance,Manual Review,False,False
+137192,invoice,Finance,data/sampled/invoice/invoice_137192.png,validation,memo,False,297,0.2465217467747807,Finance,Correspondence,False,False
+50336,email,Correspondence,data/sampled/email/email_50336.png,validation,letter,False,1463,0.3641576096502544,Correspondence,Correspondence,False,True
+163444,memo,Correspondence,data/sampled/memo/memo_163444.png,validation,letter,False,1032,0.2672895364051842,Correspondence,Correspondence,False,True
+137235,invoice,Finance,data/sampled/invoice/invoice_137235.png,validation,handwritten,False,87,0.3603707911547041,Finance,Manual Review,False,False
+98942,form,Administration,data/sampled/form/form_98942.png,validation,handwritten,False,85,0.3602002277874968,Administration,Manual Review,False,False
+171203,memo,Correspondence,data/sampled/memo/memo_171203.png,validation,letter,False,2007,0.2437120992389779,Correspondence,Correspondence,False,True
+97833,form,Administration,data/sampled/form/form_97833.png,validation,letter,False,954,0.1964130597505562,Administration,Correspondence,False,False
+122322,invoice,Finance,data/sampled/invoice/invoice_122322.png,validation,handwritten,False,839,0.3606227809917422,Finance,Manual Review,False,False
+59809,email,Correspondence,data/sampled/email/email_59809.png,validation,handwritten,False,0,0.2810853016265225,Correspondence,Manual Review,False,False
+144081,letter,Correspondence,data/sampled/letter/letter_144081.png,validation,memo,False,1023,0.3652407369557977,Correspondence,Correspondence,False,True
+127012,invoice,Finance,data/sampled/invoice/invoice_127012.png,validation,handwritten,False,674,0.2764549265695896,Finance,Manual Review,False,False
+175941,memo,Correspondence,data/sampled/memo/memo_175941.png,validation,letter,False,2017,0.3314673029324794,Correspondence,Correspondence,False,True
+177103,memo,Correspondence,data/sampled/memo/memo_177103.png,validation,letter,False,1285,0.3486766741511828,Correspondence,Correspondence,False,True
+90047,form,Administration,data/sampled/form/form_90047.png,validation,memo,False,1314,0.330377291769122,Administration,Correspondence,False,False
+108327,handwritten,Manual Review,data/sampled/handwritten/handwritten_108327.png,validation,letter,False,1559,0.5191719841593281,Manual Review,Correspondence,False,False
+137688,invoice,Finance,data/sampled/invoice/invoice_137688.png,validation,handwritten,False,0,0.2810853016265225,Finance,Manual Review,False,False
+149803,letter,Correspondence,data/sampled/letter/letter_149803.png,validation,budget,False,929,0.2001733692661016,Correspondence,Finance,False,False
+225134,questionnaire,Administration,data/sampled/questionnaire/questionnaire_225134.png,validation,invoice,False,552,0.1990251766741743,Administration,Finance,False,False
+44887,email,Correspondence,data/sampled/email/email_44887.png,validation,budget,False,187,0.1822321529154547,Correspondence,Finance,False,False
+126463,invoice,Finance,data/sampled/invoice/invoice_126463.png,validation,handwritten,False,474,0.3153616531556454,Finance,Manual Review,False,False
+80879,form,Administration,data/sampled/form/form_80879.png,validation,letter,False,567,0.1813767766393615,Administration,Correspondence,False,False
+43766,email,Correspondence,data/sampled/email/email_43766.png,validation,memo,False,3215,0.2245975711073375,Correspondence,Correspondence,False,True
+40255,email,Correspondence,data/sampled/email/email_40255.png,validation,memo,False,1710,0.2405189338997057,Correspondence,Correspondence,False,True
+102819,handwritten,Manual Review,data/sampled/handwritten/handwritten_102819.png,validation,questionnaire,False,477,0.2704693441296293,Manual Review,Administration,False,False
+93493,form,Administration,data/sampled/form/form_93493.png,validation,letter,False,1589,0.3514407931506689,Administration,Correspondence,False,False
+173332,memo,Correspondence,data/sampled/memo/memo_173332.png,validation,invoice,False,797,0.3090433242032491,Correspondence,Finance,False,False
+141732,letter,Correspondence,data/sampled/letter/letter_141732.png,validation,memo,False,2370,0.4420826986421606,Correspondence,Correspondence,False,True
+227325,questionnaire,Administration,data/sampled/questionnaire/questionnaire_227325.png,validation,handwritten,False,8,0.2810853016265225,Administration,Manual Review,False,False
+149470,letter,Correspondence,data/sampled/letter/letter_149470.png,validation,memo,False,1444,0.2656570382116148,Correspondence,Correspondence,False,True
+168033,memo,Correspondence,data/sampled/memo/memo_168033.png,validation,letter,False,887,0.3094678395861159,Correspondence,Correspondence,False,True
+164347,memo,Correspondence,data/sampled/memo/memo_164347.png,validation,handwritten,False,159,0.4327444236455262,Correspondence,Manual Review,False,False
+228690,questionnaire,Administration,data/sampled/questionnaire/questionnaire_228690.png,validation,handwritten,False,705,0.378507454850405,Administration,Manual Review,False,False
+229083,questionnaire,Administration,data/sampled/questionnaire/questionnaire_229083.png,validation,handwritten,False,1406,0.2748818315449394,Administration,Manual Review,False,False
+221035,questionnaire,Administration,data/sampled/questionnaire/questionnaire_221035.png,validation,handwritten,False,514,0.2079070985346126,Administration,Manual Review,False,False
+142732,letter,Correspondence,data/sampled/letter/letter_142732.png,validation,form,False,26,0.2710262276993234,Correspondence,Administration,False,False
+233016,questionnaire,Administration,data/sampled/questionnaire/questionnaire_233016.png,validation,budget,False,1581,0.2907822394201239,Administration,Finance,False,False
+97874,form,Administration,data/sampled/form/form_97874.png,validation,handwritten,False,990,0.388170413052385,Administration,Manual Review,False,False
+130181,invoice,Finance,data/sampled/invoice/invoice_130181.png,validation,handwritten,False,264,0.24758626740793,Finance,Manual Review,False,False
+39876,budget,Finance,data/sampled/budget/budget_39876.png,validation,handwritten,False,160,0.3011313987751347,Finance,Manual Review,False,False
+140120,letter,Correspondence,data/sampled/letter/letter_140120.png,validation,form,False,404,0.4455058885034108,Correspondence,Administration,False,False
+142774,letter,Correspondence,data/sampled/letter/letter_142774.png,validation,memo,False,1745,0.3629078123875911,Correspondence,Correspondence,False,True
+150421,letter,Correspondence,data/sampled/letter/letter_150421.png,validation,form,False,715,0.325485676212222,Correspondence,Administration,False,False
+22515,budget,Finance,data/sampled/budget/budget_22515.png,validation,memo,False,507,0.2301768540961641,Finance,Correspondence,False,False
+223037,questionnaire,Administration,data/sampled/questionnaire/questionnaire_223037.png,validation,handwritten,False,0,0.2810853016265225,Administration,Manual Review,False,False
+134962,invoice,Finance,data/sampled/invoice/invoice_134962.png,validation,letter,False,1661,0.3360113347216918,Finance,Correspondence,False,False
+26179,budget,Finance,data/sampled/budget/budget_26179.png,validation,handwritten,False,230,0.2104360784996217,Finance,Manual Review,False,False
+144071,letter,Correspondence,data/sampled/letter/letter_144071.png,validation,memo,False,1816,0.4599892482120811,Correspondence,Correspondence,False,True
+20251,budget,Finance,data/sampled/budget/budget_20251.png,validation,handwritten,False,237,0.4231717368571703,Finance,Manual Review,False,False
+147957,letter,Correspondence,data/sampled/letter/letter_147957.png,validation,form,False,1039,0.3131371082541768,Correspondence,Administration,False,False
+158382,letter,Correspondence,data/sampled/letter/letter_158382.png,validation,invoice,False,355,0.3555016678812915,Correspondence,Finance,False,False
+143764,letter,Correspondence,data/sampled/letter/letter_143764.png,validation,memo,False,1342,0.2536019469249629,Correspondence,Correspondence,False,True
+239631,questionnaire,Administration,data/sampled/questionnaire/questionnaire_239631.png,validation,handwritten,False,278,0.4216629652851253,Administration,Manual Review,False,False
+51129,email,Correspondence,data/sampled/email/email_51129.png,validation,form,False,445,0.1955816282813588,Correspondence,Administration,False,False
+95188,form,Administration,data/sampled/form/form_95188.png,validation,handwritten,False,76,0.3335057509130231,Administration,Manual Review,False,False
+82158,form,Administration,data/sampled/form/form_82158.png,validation,letter,False,2964,0.2996573783756383,Administration,Correspondence,False,False
+20243,budget,Finance,data/sampled/budget/budget_20243.png,validation,handwritten,False,245,0.3407100262141788,Finance,Manual Review,False,False
+153060,letter,Correspondence,data/sampled/letter/letter_153060.png,validation,email,False,460,0.3857631277200147,Correspondence,Correspondence,False,True
+159196,letter,Correspondence,data/sampled/letter/letter_159196.png,validation,memo,False,1158,0.292536060226138,Correspondence,Correspondence,False,True
+34679,budget,Finance,data/sampled/budget/budget_34679.png,validation,handwritten,False,146,0.2144055926066128,Finance,Manual Review,False,False
+144177,letter,Correspondence,data/sampled/letter/letter_144177.png,validation,handwritten,False,165,0.2656781638472105,Correspondence,Manual Review,False,False
+253457,resume,HR,data/sampled/resume/resume_253457.png,validation,memo,False,2464,0.2675155052079715,HR,Correspondence,False,False
+146156,letter,Correspondence,data/sampled/letter/letter_146156.png,validation,memo,False,1015,0.3588178602461274,Correspondence,Correspondence,False,True
+93730,form,Administration,data/sampled/form/form_93730.png,validation,handwritten,False,12,0.2810853016265225,Administration,Manual Review,False,False
+37735,budget,Finance,data/sampled/budget/budget_37735.png,validation,handwritten,False,0,0.2810853016265225,Finance,Manual Review,False,False
+221069,questionnaire,Administration,data/sampled/questionnaire/questionnaire_221069.png,validation,form,False,539,0.6209213217403456,Administration,Administration,False,True
+146428,letter,Correspondence,data/sampled/letter/letter_146428.png,validation,memo,False,486,0.3917750137345492,Correspondence,Correspondence,False,True
+221591,questionnaire,Administration,data/sampled/questionnaire/questionnaire_221591.png,validation,budget,False,895,0.2658499700395602,Administration,Finance,False,False
+95365,form,Administration,data/sampled/form/form_95365.png,validation,memo,False,1077,0.262240423827584,Administration,Correspondence,False,False
+155715,letter,Correspondence,data/sampled/letter/letter_155715.png,validation,memo,False,934,0.2563704135702719,Correspondence,Correspondence,False,True
+42118,email,Correspondence,data/sampled/email/email_42118.png,validation,memo,False,1344,0.1776027447366157,Correspondence,Correspondence,False,True
+55445,email,Correspondence,data/sampled/email/email_55445.png,validation,letter,False,1902,0.2417694845423647,Correspondence,Correspondence,False,True
+99372,form,Administration,data/sampled/form/form_99372.png,validation,letter,False,2009,0.263256801245132,Administration,Correspondence,False,False
+138913,invoice,Finance,data/sampled/invoice/invoice_138913.png,validation,form,False,421,0.4762828838628102,Finance,Administration,False,False

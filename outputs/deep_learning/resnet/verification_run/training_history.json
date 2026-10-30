@@ -1,0 +1,15 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 1.6808090525834019,
+    "train_document_accuracy": 0.42243386243386244,
+    "train_document_macro_f1": 0.40941940419692,
+    "train_routing_accuracy": 0.5487830687830688,
+    "train_routing_macro_f1": 0.5434674971815925,
+    "validation_loss": 1.461469656891293,
+    "validation_document_accuracy": 0.4990079365079365,
+    "validation_document_macro_f1": 0.4876255978991324,
+    "validation_routing_accuracy": 0.6001984126984127,
+    "validation_routing_macro_f1": 0.5997707806395878
+  }
+]

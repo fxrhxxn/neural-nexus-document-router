@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Python
+# Python cache / compiled files
 __pycache__/
 *.py[cod]
 
@@ -12,15 +11,23 @@ __pycache__/
 # macOS
 .DS_Store
 
+# Local secrets / environment variables
+.env
+
 # Large model files
 *.pt
 *.pth
-
-# Local secrets
-.env
-.venv
-# Temporary output
-outputs/temp/
+*.ckpt
+*.onnx
 
 # Sampled RVL-CDIP images
 data/sampled/
+
+# Generated OCR caches
+outputs/ocr_cache/
+
+# Temporary outputs
+outputs/temp/
+
+# Generated project structure file
+NeuralNexusProjectStructure.md
